@@ -1,6 +1,6 @@
 import 'package:challenge/models/coin.dart';
-import 'package:challenge/services/coin_helper.dart';
-import 'package:challenge/utils/my_preferences.dart';
+import 'package:challenge/services/coin_repository_helper.dart';
+import 'package:challenge/services/my_preferences.dart';
 import 'package:flutter/cupertino.dart';
 
 class CoinProvider extends ChangeNotifier {
@@ -11,7 +11,7 @@ class CoinProvider extends ChangeNotifier {
       _savedCoins..sort((first, sec) => first.id.compareTo(sec.id));
 
   CoinProvider() {
-    CoinHelper.fetchAllCoins().then((coins) {
+    CoinRepositoryHelper.fetchAllCoins().then((coins) {
       _allCoins = coins;
       restoreSavedCoins();
       notifyListeners();
@@ -70,6 +70,6 @@ class CoinProvider extends ChangeNotifier {
   }
 
   Future<Coin> fetchCoinData(String coinId) {
-    return CoinHelper.fetchCoinData(coinId);
+    return CoinRepositoryHelper.fetchCoinData(coinId);
   }
 }

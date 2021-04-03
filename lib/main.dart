@@ -1,7 +1,7 @@
 import 'package:challenge/config/state/index.dart';
 import 'package:challenge/providers/coins_provider.dart';
 import 'package:challenge/routes.dart';
-import 'package:challenge/utils/my_preferences.dart';
+import 'package:challenge/services/my_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
