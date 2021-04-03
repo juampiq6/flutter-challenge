@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:challenge/models/coin.dart';
 import 'package:http/http.dart' as http;
 
-class CoinHelper {
+class CoinRepositoryHelper {
   static String apiUrl = "https://api.coingecko.com/api/v3";
 
   static Future<List<Coin>> fetchAllCoins() async {
