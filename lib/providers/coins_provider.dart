@@ -4,7 +4,7 @@ import 'package:challenge/utils/my_preferences.dart';
 import 'package:flutter/cupertino.dart';
 
 class CoinProvider extends ChangeNotifier {
-  List<Coin> _allCoins;
+  List<Coin> _allCoins = [];
   List<Coin> _savedCoins = [];
   List<Coin> get savedCoins => _savedCoins;
   List<Coin> get savedCoinsInAlpOrder =>
